@@ -1,0 +1,121 @@
+.container-fluid{
+  height: 100vh;
+  background-color: #3FEEE6;
+}
+
+#center{
+  height: 70vh;
+}
+
+#content{
+  margin-left: 50px;
+    padding: 10px;
+}
+#content h1{
+    font-size: 5rem;
+}
+#caption{
+  height: 50px;
+    padding: 10px;
+  margin-left: 75px;
+    width: 500px;
+    text-align: justify;
+}
+#caption h4{
+    font-size: 2.5rem;
+}
+#caption h6{
+    font-size: 1.25rem;
+}
+#divider{
+    margin-left: 50px;
+    padding: 10px;
+}
+
+#top, #bottom{
+  height: 15vh;
+}
+
+
+
+.label{
+  color: #55BCC9;
+  font-weight: bolder;
+}
+
+#display{
+  color: #1A1A1D;
+    width: 450px;
+}
+
+.fas, .fab, .far{
+  display: block;
+  font-size: 2rem;
+  margin: 10px;
+  color: #FC4445;
+  cursor: pointer;
+}
+
+a#link{
+  margin: 10px;
+  color: #FC4445;
+  cursor: pointer;
+}
+
+.fas:hover, .fab:hover, a#link:hover, .far:hover{
+  color: #7D2222;
+}
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes right_animate{
+   0% {
+    margin-top: 10px;
+  }
+
+  50% {
+    margin-top: 25px;
+  }
+
+  100% {
+    margin-top: 10;
+  }
+}
+
+#icon_bottom{
+   -webkit-animation-name: right_animate; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: right_animate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes left_animate{
+   0% {
+    margin-bottom: 10px;
+  }
+
+  50% {
+    margin-bottom: 25px;
+  }
+
+  100% {
+    margin-bottom: 10px;
+  }
+}
+
+#icon_top{
+   -webkit-animation-name: left_animate; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: left_animate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#label_github, #label_about, #label_contact{
+  opacity: 0;
+  transition: 1s;
+}
+
