@@ -1,29 +1,60 @@
 // Data
-var counter = 0;
+var counter = 1;
 var about_data = [
   {
-      content:"<h1>ERIC<br>POITRAS</h1>",
-      caption: "<h4>Web Designer</h4>",
+      content:`
+        <ul class="list-group" style="width:550px">
+          <li class="list-group-item text-center" style="background-color: transparent">
+                <h5 class="font-weight-bold">Front-End Web</h5>
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Badge_js-strict.svg" height="50px">
+          </li>
+          <li class="list-group-item text-center" style="background-color: transparent">
+                    <h5 class="font-weight-bold">Web Libraries</h5>
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/JQuery-Logo.svg" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Boostrap_logo.svg" height="50px">
+            </li>
+          <li class="list-group-item text-center" style="background-color: transparent">
+                    <h5 class="font-weight-bold">ML & APIs</h5>
+                    <img class="ml-2 mr-2" src="https://1xltkxylmzx3z8gd647akcdvov-wpengine.netdna-ssl.com/wp-content/uploads/2016/06/rapidminer-logo-retina.png" height="50px">
+                    <img class="ml-2 mr-2" src="https://verify-img-thumb.s3.amazonaws.com/BigML.png/320px-BigML.png" height="50px">
+            </li>
+          <li class="list-group-item text-center" style="background-color: transparent">
+                    <h5 class="font-weight-bold">Win & Game App</h5>
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Unity_Technologies_logo.svg" height="50px">
+            </li>
+          <li class="list-group-item text-center" style="background-color: transparent">
+                    <h5 class="font-weight-bold">Multimedia</h5>
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Adobe_Experience_Design_logo.svg" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" height="50px">
+                    <img class="ml-2 mr-2" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Adobe_Premiere_Pro_Logo.svg" height="50px">
+            </li>
+        </ul>
+`,
+      caption: "<h4>SKILLS</h4>",
       url:""
   },
   {
       content: "<h1>COURSES</h1>", 
-      caption: "<h6>Graduate course in the masters in statistics program about data analytics (i.e., RapidMiner, BigML API), visualizations (JS charts), multimedia (Adobe CC), and front-end web development (HTML, CSS, JS).</h6>",
-      url: "EDPS%206447.png"
+      caption: "<h6 class='mb-3'>Graduate course in the masters in statistics program about data analytics (i.e., RapidMiner, BigML API), visualizations (JS charts), multimedia (Adobe CC), and front-end web development (HTML, CSS, JS).</h6><i class='fas fa-code d-inline'></i><h6 class='d-inline'>CODE</h6><i class='fas fa-laptop-code d-inline'></i><h6 class='d-inline'>LIVE</h6>",
+      url: "edps6447.png"
   },
   {
       content: "<h1>MIXED REALITY</h1>", 
-      caption: "<h6>Tangible and virtual 3D models of fossils at the Natural History Museum of Utah that implement machine learning models for automated detection of student behaviors in real-time.</h6>",
+      caption: "<h6 class='mb-3'>Tangible and virtual 3D models of fossils at the Natural History Museum of Utah that implement machine learning models for automated detection of student behaviors in real-time.</h6><i class='fas fa-code d-inline'></i><h6 class='d-inline'>CODE</h6><i class='fas fa-laptop-code d-inline'></i><h6 class='d-inline'>LIVE</h6>",
       url: "NHMU%20Mixed%20Reality.png"
   },
   {
       content: "<h1>ANALYTICS DASHBOARD</h1>", 
-      caption: "<h6>MICoder is an online data coding and scoring platform that implements machine learning models to analyze therapist-client discourse in counseling sessions.</h6>",
+      caption: "<h6 class='mb-3'>MICoder is an online data coding and scoring platform that implements machine learning models to analyze therapist-client discourse in counseling sessions.</h6><i class='fas fa-code d-inline'></i><h6 class='d-inline'>CODE</h6><i class='fas fa-laptop-code d-inline'></i><h6 class='d-inline'>LIVE</h6>",
       url: "MICoder.png"
   },
   {
-      content: "<h1>INTELLIGENT TUTORING SYSTEM</h1>", 
-      caption: "<h6>MITutor is an application that implements natural language processing as part of training workshops given at the UCC clinic at the University of Utah.</h6>",
+      content: "<h1>TUTORING SYSTEM</h1>", 
+      caption: "<h6 class='mb-3'>MITutor is an application that implements natural language processing as part of training workshops given at the UCC clinic at the University of Utah.</h6><i class='fas fa-code d-inline'></i><h6 class='d-inline'>CODE</h6><i class='fas fa-laptop-code d-inline'></i><h6 class='d-inline'>LIVE</h6>",
       url: "NIH%20depth.png"
   }
 ];
@@ -46,13 +77,16 @@ left.style.animationPlayState = "paused";
 var right = document.querySelector("#icon_bottom");
 right.style.animationPlayState = "paused";
 var coffee = document.querySelector(".fa-coffee");
+var list = document.querySelector(".fa-th-list");
 var paperplane = document.querySelector(".fa-paper-plane");
 var github = document.querySelector(".fa-github");
 var display = document.getElementById("display");
 var label_github = document.getElementById("label_github");
 var label_about = document.getElementById("label_about");
 var label_contact = document.getElementById("label_contact");
+var label_project = document.getElementById("label_project");
 var content = document.getElementById("content");
+var divider = document.getElementById("divider");
 var caption = document.getElementById("caption");
 var screenshot = document.getElementById("screenshot");
 var welcome_img = document.getElementById("welcome_img");
@@ -90,6 +124,9 @@ left.addEventListener("mouseleave",function(){
 coffee.addEventListener("click",function(){
     update_display("coffee");
 });
+list.addEventListener("click",function(){
+    update_display("list");
+});
 paperplane.addEventListener("click",function(){
     update_display("paper-plane");
 });
@@ -101,6 +138,12 @@ coffee.addEventListener("mouseover",function(){
 });
 coffee.addEventListener("mouseleave",function(){
   animate_opacity("mouseleave", label_about);
+});
+list.addEventListener("mouseover",function(){
+    animate_opacity("mouseover", label_project);
+});
+list.addEventListener("mouseleave",function(){
+    animate_opacity("mouseleave", label_project);
 });
 paperplane.addEventListener("mouseover",function(){
   animate_opacity("mouseover",label_contact);
@@ -125,15 +168,17 @@ function update_display(value){
           welcome_img.classList.add("d-none");
           image.classList.remove("d-none");
           counter--;
+          console.log(counter);
         if(counter<1){
             counter = about_data.length-1;
             content.innerHTML = about_data[counter].content;
             caption.innerHTML = about_data[counter].caption;
-            screenshot.attributes.src = about_data[counter].url;
+            screenshot.src = about_data[counter].url;
         }else{
             content.innerHTML = about_data[counter].content;
             caption.innerHTML = about_data[counter].caption;
-            screenshot.attributes.src = about_data[counter].url;
+            screenshot.src = about_data[counter].url;
+            console.log(screenshot.src);
         }
         $("#content").css('opacity', 0)
   .slideDown('slow')
@@ -189,11 +234,43 @@ function update_display(value){
   );
       break;
     case "coffee":
-      label.innerHTML = "ABOUT";
+      label.innerHTML = "SKILLS";
       content.innerHTML = about_data[0].content;
       caption.innerHTML = about_data[0].caption;
       welcome_img.classList.remove("d-none");
       image.classList.add("d-none");
+      left.style.display = "none";
+      right.style.display = "none";
+      divider.style.display="none";
+      caption.style.display="none";
+          
+             $("#content").css('opacity', 0)
+  .slideDown('slow')
+  .animate(
+    { opacity: 1 },
+    { queue: false, duration: 'slow' }
+  );
+        /*$("#caption").css('opacity', 0)
+  .slideDown('slow')
+  .animate(
+    { opacity: 1 },
+    { queue: false, duration: 'slow' }
+  );*/
+        $("#image").css('opacity', 0)
+  .slideDown('slow')
+  .animate(
+    { opacity: 1 },
+    { queue: false, duration: 'slow' }
+  );
+      break;
+    case "list":
+      label.innerHTML = "PROJECT";
+      content.innerHTML = about_data[1].content;
+      divider.style.display="block";
+      caption.innerHTML = about_data[1].caption;
+      welcome_img.classList.add("d-none");
+      image.classList.remove("d-none");
+      screenshot.src = about_data[1].url;
       left.style.display = "block";
       right.style.display = "block";
              $("#content").css('opacity', 0)
@@ -218,6 +295,7 @@ function update_display(value){
     case "paper-plane":
       label.innerHTML = "CONTACT";
       content.innerHTML= contact_data[0].content;
+      divider.style.display="block";
       caption.innerHTML = contact_data[0].caption;
       welcome_img.classList.remove("d-none");
       image.classList.add("d-none");

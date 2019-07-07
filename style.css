@@ -114,7 +114,7 @@ a#link{
   animation-iteration-count: infinite;
 }
 
-#label_github, #label_about, #label_contact{
+#label_github, #label_about, #label_contact, #label_project{
   opacity: 0;
   transition: 1s;
 }
